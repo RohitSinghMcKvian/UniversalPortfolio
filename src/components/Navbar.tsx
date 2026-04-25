@@ -231,6 +231,9 @@ export default function Navbar() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={(e) => {
+                    if (link.download || link.external) {
+                      return
+                    }
                     e.preventDefault()
                     handleNavClick(link.href)
                   }}
