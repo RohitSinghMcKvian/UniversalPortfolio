@@ -20,7 +20,7 @@ export default function Footer() {
     const ctx = gsap.context(() => {
       gsap.to(marqueeRef.current, {
         xPercent: -50,
-        duration: 40,
+        duration: 25,
         ease: 'none',
         repeat: -1,
       })
@@ -61,7 +61,7 @@ export default function Footer() {
       <div className="relative z-10 overflow-hidden mb-12">
         <div ref={marqueeRef} className="flex whitespace-nowrap">
           {Array(10).fill(null).map((_, i) => (
-            <span key={i} className="text-5xl md:text-7xl lg:text-8xl font-display text-stroke/30 px-4">
+            <span key={i} className="text-5xl md:text-7xl lg:text-8xl font-display text-white/50 px-4">
               {marqueeText}
             </span>
           ))}
